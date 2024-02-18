@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gradient Background Generator</title>
+	<style>
+		body {
+			background: linear-gradient(to right, #000000, #ffffff);
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		.color-picker {
+			margin-bottom: 20px;
+		}
+		.gradient-type {
+			margin-bottom: 20px;
+		}
+		.preview {
+			width: 500px;
+			height: 300px;
+			margin-bottom: 20px;
+			border: 1px solid #000000;
+		}
+		h1 {
+			text-shadow: 0 0 20px #ffffff , 0 0 40px #000000;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Gradient Background Generator</h1>
+		<div class="color-picker">
+			<label for="color1">Color 1 :</label>
+			<input type="color" id="color1" value="#000000">
+			<label for="color2">Color 2 :</label>
+			<input type="color" id="color2" value="#ffffff">
+		</div>
+		<div class="gradient-type">
+			<label for="gradient-type">Gradient Type :</label>
+			<select id="gradient-type">
+				<option value="linear">Linear</option>
+				<option value="radial">Radial</option>
+			</select>
+		</div>
+		<div class="preview"></div>
+	</div>
+	<script>
+		const color1 = document.getElementById('color1');
+		const color2 = document.getElementById('color2');
+		const gradientType = document.getElementById('gradient-type');
+		const preview = document.querySelector('.preview');
+
+		function setGradient() {
+			preview.style.background = `${gradientType.value}-gradient(to right, ${color1.value}, ${color2.value})`;
+		}
+
+		color1.addEventListener('input', setGradient);
+		color2.addEventListener('input', setGradient);
+		gradientType.addEventListener('change', setGradient);
+	</script>
+</body>
+</html>
