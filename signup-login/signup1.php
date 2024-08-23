@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $check_username = "SELECT * FROM signup WHERE username='$username'";
     $result = $conn->query($check_username);
     if ($result->num_rows > 0) {
-        echo "Username already exists";
+        echo "Username already exists!";
     } else {
         // Insert into database
         $insert_query = "INSERT INTO signup (username, fname, lname, email, password) VALUES ('$username', '$fname', '$lname', '$email', '$password')";
