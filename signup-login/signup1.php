@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Username already exists";
     } else {
         // Insert into database
-        $insert_query = "INSERT INTO signup (username, $fname, $lname, email, password) VALUES ('$username', '$fname', '$lname', '$email', '$password')";
+        $insert_query = "INSERT INTO signup (username, fname, lname, email, password) VALUES ('$username', '$fname', '$lname', '$email', '$password')";
         if ($conn->query($insert_query) === TRUE) {
             echo "New record created successfully";
         } else {
