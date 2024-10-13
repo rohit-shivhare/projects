@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog Clock</title>
+    <style>
+        .clock {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 10px solid black;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .hand {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: bottom;
+            transform: translate(50%, -100%) rotate(90deg);
+            background-color: black;
+            border-radius: 5px;
+        }
+        .hour-hand {
+            width: 6px;
+            height: 70px; /* Changed for better visibility */
+        }
+        .minute-hand {
+            width: 4px;
+            height: 100px;
+            background-color: gray;
+        }
+        .second-hand {
+            width: 2px;
+            height: 120px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="clock">
+        <div class="center">
+            <div class="hand hour-hand" id="hourHand"></div>
+            <div class="hand minute-hand" id="minuteHand"></div>
+            <div class="hand second-hand" id="secondHand"></div>
+        </div>
+    </div>
+
+    <script>
+        // const secondHand = document.getElementById('secondHand');
+        // const minuteHand = document.getElementById('minuteHand');
+        // const hourHand = document.getElementById('hourHand');
+
+        function updateClock() {
+            const now = new Date();
+            
+            const seconds = now.getSeconds();
+            const minutes = now.getMinutes();
+            const hours = now.getHours();
+
+            const secondDegrees = ((seconds / 60) * 360) + 90; // offset 90 degrees to match CSS starting point
+            const minuteDegrees = ((minutes / 60) * 360) + ((seconds / 60) * 6) + 90; // Extra rotation based on seconds
+            const hourDegrees = ((hours % 12) / 12 * 360) + ((minutes / 60) * 30) + 90; // Extra rotation based on minutes
+
+            secondHand.style.transform = `translate(-50%, -100%) rotate(${secondDegrees}deg)`;
+            minuteHand.style.transform = `translate(-50%, -100%) rotate(${minuteDegrees}deg)`;
+            hourHand.style.transform = `translate(-50%, -100%) rotate(${hourDegrees}deg)`;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock(); // Initial call to see clock immediately
+    </script>
+</body>
+</html>
