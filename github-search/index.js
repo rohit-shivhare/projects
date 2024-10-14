@@ -35,3 +35,26 @@ const repoGetFunction = (name) => {
         errorFunction("Problem fetching repos");
     })
 }
+
+const usercard = (user) => {
+    let id = user.name || user.login;
+    let info = user.bio ? `<p>${user.bio}</p>` : "";
+    let cardElement = `<div class = "card">
+                            <div>
+                                <img src = "${user.avatar_url}" alt = "${user.name}" class = "avatar">
+                            </div>
+                            
+                            <div class = "user-info">
+                                <h2>${id}</h2>${info}
+                                <ul>
+                                    <li>${user.public_repos} <strong>Repos</strong></li>
+                                    <li>${user.followers} <strong>Followers</strong></li>
+                                    <li>${user.followinf} <strong>Following</strong></li>
+                                </ul>
+                                
+                                <div id = "repos"></div>
+                            </div>
+                        </div>`;
+
+                        main.innerHTML = cardElement
+}
