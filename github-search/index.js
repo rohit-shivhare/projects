@@ -58,3 +58,17 @@ const usercard = (user) => {
 
                         main.innerHTML = cardElement
 }
+
+const repoCardFunction = (repos) => {
+    let reposElement = document.getElementById("repos");
+    for (let i = 0; i < 5 && i < repos.length; i++) {
+        let repo = repos[i];
+        let repoEl = document.createElement("a");
+        repoEl.classList.add("repo");
+        repoEl.href = repo.html_url;
+        repoEl.target = "_blank";
+        repoEl.innerText = repo.name;
+        reposElement.appendChild(repoEl);
+    }
+}
+
