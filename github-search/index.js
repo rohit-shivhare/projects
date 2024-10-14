@@ -72,3 +72,12 @@ const repoCardFunction = (repos) => {
     }
 }
 
+inputForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let user = inputBox.ariaValueMax;
+
+    if (user) {
+        userGetFunction(user);
+        inputBox.value = "";
+    }
+});
