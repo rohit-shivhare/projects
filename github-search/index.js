@@ -26,3 +26,12 @@ const userGetFunction = (name) => {
         });
 }
 
+const repoGetFunction = (name) => {
+    axios(api + name + "/repos?sort=created")
+    .then((Response) => {
+        repoCardFunction(Response.data);
+    })
+    .catch((err) => {
+        errorFunction("Problem fetching repos");
+    })
+}
