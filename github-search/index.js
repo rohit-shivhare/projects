@@ -36,7 +36,7 @@ const repoGetFunction = (name) => {
     })
 }
 
-const usercard = (user) => {
+const userCard = (user) => {
     let id = user.name || user.login;
     let info = user.bio ? `<p>${user.bio}</p>` : "";
     let cardElement = `<div class = "card">
@@ -74,7 +74,7 @@ const repoCardFunction = (repos) => {
 
 inputForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    let user = inputBox.ariaValueMax;
+    let user = inputBox.value;
 
     if (user) {
         userGetFunction(user);
