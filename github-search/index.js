@@ -49,7 +49,7 @@ const userCard = (user) => {
                                 <ul>
                                     <li>${user.public_repos} <strong>Repos</strong></li>
                                     <li>${user.followers} <strong>Followers</strong></li>
-                                    <li>${user.followinf} <strong>Following</strong></li>
+                                    <li>${user.following} <strong>Following</strong></li>
                                 </ul>
                                 
                                 <div id = "repos"></div>
