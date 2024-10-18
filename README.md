@@ -1,3 +1,5 @@
+<video src="recording.mp4" autoplay loop></video>
+
 # GitHub User Search
 
 ## Project Overview
