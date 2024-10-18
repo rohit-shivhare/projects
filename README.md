@@ -12,7 +12,8 @@ The project is built using **HTML**, **CSS**, and **JavaScript**.
 ## Video Demonstration
 
 [![Watch the video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtu.be/F1yBw66awAM&autoplay=1)
-<video src="/github-search/project-recoding.mp4" autoplay loop muted controls></video>
+
+<video src="./github-search/project-recoding.mp4" autoplay loop muted controls></video>
 
 ## Key Features
 
