@@ -10,7 +10,7 @@ The project is built using **HTML**, **CSS**, and **JavaScript**.
 
 ## Video Demonstration
 
-[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID&autoplay=1)
+[![Watch the video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtu.be/F1yBw66awAM&autoplay=1)
 
 ## Key Features
 
