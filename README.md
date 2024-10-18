@@ -12,6 +12,9 @@ The project is built using **HTML**, **CSS**, and **JavaScript**.
 
 [![Watch the video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtu.be/F1yBw66awAM&autoplay=1)
 
+<div>
+  <iframe width="1039" height="513" src="https://www.youtube.com/embed/F1yBw66awAM" title="GitHub-Account-Searcher" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 ## Key Features
 
 - **User-friendly Interface:** A clean and simple design for searching GitHub users by username.
